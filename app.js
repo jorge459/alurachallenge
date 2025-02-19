@@ -23,11 +23,27 @@ function agregarElementosLista(){
     }
 }
 
-// function agregarAmigo(){
-//     agregarParticipantes();
-//     agregarElementosLista()
-//     console.log(participantes);
-// }
+function sortearAmigo(){
+
+
+    if (participantes.length == 0){
+        alert("la lista se encuentra vacia");
+    }else{
+        let numeroRandom= Math.floor(Math.random()*participantes.length);
+        let participanteSortudo = participantes[numeroRandom];
+        
+        let listaElegido = document.getElementById("resultado");
+        listaElegido.innerHTML = "";
+        let nuevaLista = document.createElement("li");
+        nuevaLista.textContent = "El amigo Sortudo es: " + participanteSortudo ;
+        listaElegido.appendChild(nuevaLista);
+    }
+}
+function agregarAmigo(){
+    agregarParticipantes();
+    agregarElementosLista()
+    
+}
 
 
 
