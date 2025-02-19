@@ -13,5 +13,21 @@ function agregarParticipantes(){
     return;
 }
 
+function agregarElementosLista(){
+    let listaParticipantes = document.getElementById("listaAmigos");
+    listaParticipantes.innerHTML = "";
+    for (let i=0; i<participantes.length;i++){
+        let nuevaLista = document.createElement("li");
+        nuevaLista.textContent = participantes[i];
+        listaParticipantes.appendChild(nuevaLista);
+    }
+}
+
+// function agregarAmigo(){
+//     agregarParticipantes();
+//     agregarElementosLista()
+//     console.log(participantes);
+// }
+
 
 
